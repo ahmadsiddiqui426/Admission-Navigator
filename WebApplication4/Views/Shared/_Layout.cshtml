@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication4</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication4.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand admission-navigator-btn" asp-area="" asp-controller="Home" asp-action="Index">Admission Navigator</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-us">Contact Us</a>
+                        </li>
+
+
+                        <!-- Add more navbar items here -->
+                    </ul>
+                    <img src="~/images/Logo (2).png" alt="Logo" class="navbar-logo">
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Add your footer content here -->
+                <div class="col-lg-4 col-md-6">
+                    <h5>About Admission Navigator</h5>
+                    <p>Admission Navigator is your trusted partner in the journey towards higher education. Our platform offers a comprehensive directory of universities and courses, enabling students to make informed decisions about their future. With personalized support and up-to-date information, we streamline the admission process to connect learners with their ideal academic paths. Discover your potential with Admission Navigator — where your educational aspirations take flight.</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Email:</strong> ahmadsiddiqui426@gmail.com</li>
+                        <li><strong>Phone:</strong> 03063133023</li>
+                        <li><strong>Address:</strong> Gulberg,Phase A Street 5, Lahore, Pakistan</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Follow Us</h5>
+                    <!-- Social icons -->
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                &copy; 2023 - WebApplication4 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

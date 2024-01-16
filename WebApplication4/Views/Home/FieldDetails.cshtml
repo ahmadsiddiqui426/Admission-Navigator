@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ConsoleApp1.Models.University>
+<div class="heading-container">
+    <h2>Universities and Colleges in Lahore</h2>
+</div>
+
+<table class="table table-universities">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Fee</th>
+            <th>Deadline</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var university in Model)
+        {
+            <tr>
+                <td>@university.Name</td>
+                <td>@university.Location</td>
+                <td>@university.Fee</td>
+                <!-- Add the deadline-date class to the Deadline column -->
+                <td class="deadline-date">@university.Deadline</td>
+            </tr>
+        }
+    </tbody>
+</table>

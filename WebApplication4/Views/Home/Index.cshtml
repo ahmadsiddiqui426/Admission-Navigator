@@ -1,0 +1,115 @@
+﻿@model IEnumerable<ConsoleApp1.Models.Fields>
+
+@{
+    // Retrieve the field count from ViewBag
+    var fieldCount = ViewBag.FieldCount;
+}
+
+
+
+<div class="text-center mt-4">
+    
+    <div class="heading-container">
+        <h2>@fieldCount Computer Sciences & Information Technology programs / courses are offered at Bachelor Level in Pakistan.</h2>
+    </div>
+
+    <table class="table mx-auto" style="width: auto; margin-top: 20px;">
+        <thead class="thead-dark">
+            <tr>
+                <th>Field Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            @foreach (var field in Model)
+            {
+                <tr>
+                    <td class="field-name">@field.Name</td>
+                    <td>
+                        <a asp-controller="Home" asp-action="FieldDetails" asp-route-id="@field.FID" class="btn btn-primary">View Universities</a>
+                        <!-- Apply the btn and btn-primary classes to the View Admissions button -->
+                        <a asp-controller="Admission" asp-action="FieldAdmissions" asp-route-id="@field.FID" class="btn btn-primary">View Admissions</a>
+                    </td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+    
+</div>
+<section id="about-us" class="about-us-section">
+    <div class="container">
+        <h2>About Us</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Our Mission</h5>
+                        <p class="card-text">To provide innovative and sustainable solutions that enhance the way our clients do business.</p>
+                        <div class="mt-auto">
+                            <!-- This ensures that anything below will align to the bottom -->
+                            <!-- Add any additional content here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Our Vision</h5>
+                        <p class="card-text">To be recognized as a leader in quality and value and as a critical component of corporate strategy, to be loved by our clients and staff.</p>
+                        <div class="mt-auto">
+                            <!-- Add any additional content here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Our Values</h5>
+                        <p class="card-text">We are committed to integrity, collaboration, and innovation, and we believe in fostering a culture of excellence.</p>
+                        <div class="mt-auto">
+                            <!-- Add any additional content here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Us Section -->
+<section id="contact-us" class="contact-us-section bg-light py-5">
+    <div class="container">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="row justify-content-center my-4">
+            <div class="col-lg-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="contactName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="contactName" placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactMessage" class="form-label">Message</label>
+                        <textarea class="form-control" id="contactMessage" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

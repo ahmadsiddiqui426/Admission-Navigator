@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ConsoleApp1.Models.Admission>
+
+@{
+    var openAdmissionsCount = ViewBag.OpenAdmissionsCount;
+    var fieldName = ViewBag.FieldName;
+}
+<div class="heading-container">
+    <h2>Admission Open in @openAdmissionsCount Colleges and Universities in BS @fieldName in Lahore</h2>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Logo</th>
+            <th>University</th>
+            <th>Discipline</th>
+            <th>Deadline</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var admission in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Content(admission.Image)" alt="Logo" style="width:50px;height:50px;" />
+                </td>
+                <td>@admission.University</td>
+                <td>@admission.Discipline</td>
+                <!-- Add a class to the deadline date cell -->
+                <td class="deadline-date">@admission.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>

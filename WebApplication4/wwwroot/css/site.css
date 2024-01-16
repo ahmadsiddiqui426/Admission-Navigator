@@ -1,0 +1,393 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Navbar Custom Styles */
+/* Increase the navbar padding and font size */
+.navbar-custom {
+    padding: 5px 15px; /* Increase padding for top and bottom, left and right */
+    background: linear-gradient(45deg, #009688 0%, #f44336 100%);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,.1);
+}
+
+    /* Increase the navbar brand and link font size for better visibility */
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+        color: white !important;
+        font-size: 18px;
+        padding: 4px 12px;
+    }
+
+
+
+/* You can also increase the size of navbar-toggler for better touch on mobile devices */
+.navbar-custom .navbar-toggler {
+    padding: .25rem .75rem; /* Increase padding for larger touch area */
+    /* Other styles remain the same */
+}
+
+/* If you have increased the font size of the navbar links, you may also want to increase the size of the navbar-toggler-icon accordingly */
+.navbar-custom .navbar-toggler-icon {
+    /* Increase size with custom styles or leave as is based on your design */
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+    color: #000000; /* Color of text on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slight background color on hover */
+}
+
+/* Table Centered Styles */
+.table-centered {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+    .table-centered th,
+    .table-centered td {
+        padding: 15px;
+    }
+
+/* Body Background */
+body {
+    background-color: #e0f2f1;
+}
+
+
+
+/* Field Name Color */
+.field-name {
+    color: #009688;
+    font-size:18px;
+}
+
+/* About Us Section Styles */
+.about-us-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-us-section {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 40px 0;
+}
+
+    .about-us-section p,
+    .about-description {
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+.network-icons i {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #009688;
+}
+
+.network-icons {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+
+.about-us-section p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-us-section .card {
+    background-color: #009688; /* Your desired background color */
+    color: #ffffff;
+    margin-top: 20px;
+    border-radius: 10px; /* Adjust if you want more or less rounded corners */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.2); /* This will create the shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.about-us-section .card-title,
+.about-us-section .card-text {
+    color: #ffffff;
+}
+
+.about-us-section .card-body {
+    padding: 20px;
+}
+
+.about-us-section .shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 123, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .about-us-section .card {
+        margin-top: 20px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact Us Section Styles */
+.contact-us-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+    .contact-us-section h2 {
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .contact-us-section .form-control {
+        border-radius: 0.25rem;
+        border: 2px solid #009688; /* Match the border color with the Send Message button */
+        /* Add other form styles if needed */
+    }
+
+    .contact-us-section .form-label {
+        font-weight: 600;
+        color: #009688; /* Match the color with the Send Message button */
+        /* Add other label styles if needed */
+    }
+
+
+    .contact-us-section .btn-primary {
+        background-color: #009688;
+        border-color: #00796b;
+        color: #ffffff;
+        box-shadow: 0 2px 4px 0 rgba(0,150,136,.25);
+    }
+
+        .contact-us-section .btn-primary:hover {
+            background-color: #00796b;
+            color: #ffffff;
+        }
+
+    .contact-us-section .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 150, 136, 0.25); /* Use the RGBA color to match the button */
+    }
+@media (max-width: 576px) {
+    .contact-us-section {
+        padding: 30px 0;
+    }
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 40px 0;
+    margin-top: auto;
+    font-size: 0.9em;
+}
+
+    .site-footer a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+        .site-footer a:hover {
+            color: #f44336;
+            text-decoration: underline;
+        }
+
+    .site-footer h5 {
+        color: #8fcb9b;
+        margin-bottom: 20px;
+    }
+
+    .site-footer .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: #009688;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        margin-right: 10px;
+        transition: background-color 0.3s;
+    }
+
+        .site-footer .social-icons a i {
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        .site-footer .social-icons a:hover {
+            background-color: #f44336;
+        }
+
+    .site-footer ul.list-unstyled {
+        padding-left: 0;
+        list-style-type: none;
+    }
+
+    .site-footer .text-center {
+        margin-top: 20px;
+        color: #aaaaaa;
+    }
+
+    .site-footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-footer .row {
+        width: 100%;
+    }
+
+.main-content > * {
+    padding: 20px;
+}
+/* Set table headings color to black and background to white */
+.table thead th {
+    background-color: #ffffff; /* White background for the table headings */
+    color: #212529; /* Black color for the text for readability */
+}
+
+/* Set table data cells color to match the navbar's teal color for contrast */
+.table tbody td {
+    color: #009688; /* Teal color to match the navbar */
+}
+
+/* Style the links within the table to match the navbar's teal color */
+.table tbody a {
+    color: #009688; /* Teal color to match the navbar */
+    text-decoration: none; /* No underline by default */
+}
+
+    /* Add an underline to links on hover for better user experience */
+    .table tbody a:hover {
+        text-decoration: underline;
+    }
+
+.table th, .navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff;
+    font-size: 18px; /* Increase the font size */
+    padding: 8px 12px; /* Increase padding to make the buttons taller */
+    font-family: 'Roboto', Arial, sans-serif; /* Add Roboto font with fallbacks */
+}
+
+.table {
+    width: 80%; /* Set the desired width of the table */
+    margin: 20px auto; /* Center the table with auto margins */
+
+    margin-bottom: 20px; /* Adds space below the table */
+}
+
+
+    .table td {
+        text-align: left; /* Center aligns text in th and td */
+        /*vertical-align: middle*/; 
+    }
+
+.table th {
+    text-align:left;
+    background-color: #f8f9fa; /* Gives a light grey background to the table headers */
+}
+/* Logo Styles */
+.navbar-logo {
+    padding-top:10px;
+    height: 100%; /* This will make sure the logo uses the full height of the navbar */
+    width: auto; /* This will keep the logo's aspect ratio intact */
+    max-height: 80px; /* Adjust the height as needed, but make sure it fits in the navbar */
+    margin-left: auto; /* This pushes the logo to the right */
+    margin-right: 0; /* Adjust the right margin if you need some space on the right side */
+    display: block; /* This will replace inline default to make margin auto work */
+}
+
+
+.admission-navigator-btn {
+    font-size: 100px; /* Adjust the font size as needed */
+    /* Add other styles as needed */
+}
+nav .navbar-brand.admission-navigator-btn {
+    font-size: 25px; /* Adjust the font size as needed */
+    /* Add other styles as needed */
+}
+
+
+
+
+
+
+.heading-container {
+    background-color: #009688; /* This is a dark blue color */
+    color: white; /* This will make the text color white */
+    padding: 10px 0; /* Add some padding above and below the text */
+    margin: auto; /* This will center the container */
+    max-width: 780px; /* Example max-width, adjust this value to match your table's width */
+    width: 100%; /* It takes the full width up to the max-width */
+    box-sizing: border-box; /* Ensures padding does not affect overall width */
+}
+
+    .heading-container h2 {
+        margin: 0; /* This will remove the default margin from the h2 */
+        padding: 0 15px; /* Add horizontal padding to match the table's cell padding */
+        text-align: center; /* Center the text inside the container */
+    }
+
+
+/* Target odd rows */
+.table tbody tr:nth-child(odd) {
+    background-color: #e0f2f1; /* Your project's powder blue color */
+}
+
+/* Target even rows */
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* A light greyish color */
+}
+.btn-primary {
+    font-size: 16px; /* Larger font size */
+    padding: 10px 20px; /* Larger padding */
+    background-color: #ffffff; /* Teal background color */
+    color: #009688; /* White text color */
+    border: 2px solid #00796b; /* Darker teal border for contrast */
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #00796b; /* Slightly darker teal on hover */
+        color: #ffffff; /* Text color remains white on hover */
+    }
+
+
+.deadline-date {
+    color: red !important; /* Changes the font color to red */
+}
